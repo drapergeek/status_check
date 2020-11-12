@@ -3,6 +3,7 @@ require 'sinatra'
 
 
 # Quick test
-get '/:status' do
-  halt status
+get '/status/:status' do
+  status params[:status].to_i
+  halt
 end
